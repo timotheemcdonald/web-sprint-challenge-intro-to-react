@@ -4,12 +4,7 @@ import styled from 'styled-components'
 import Info from './Info.js'
 
 const StyledDiv = styled.div`
-/* max-width:80%;
-width:800px;
-margin:5px auto;
-background:grey;
-border:2px solid black;
-border-radius:10px; */
+
 background-color: grey;
 color:white;
 max-width:80%;
@@ -23,10 +18,20 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 
+h2 {
+    color:black;
+    transition: all 0.5s ease-in-out;
+    &:hover{
+        color:yellow;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
 `
 
 const Character = props => {
 
+ 
     return (
         <StyledDiv><h2>{props.name}</h2>
         <Info gender={props.propsPassed.gender} mass={props.propsPassed.mass} birth={props.propsPassed.birth_year} height={props.propsPassed.height} />
